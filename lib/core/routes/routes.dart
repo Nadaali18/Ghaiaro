@@ -7,6 +7,8 @@ class Routes {
   static const String splash = '/';
   static const String onboarding = '/onboarding';
   static const String signUp = '/signUp';
+  static const String login = '/login';
+  static const String home = '/home';
 
   static final routes = GoRouter(
     routes: [
@@ -20,6 +22,14 @@ class Routes {
       ),
       GoRoute(
         path: signUp,
+        builder: (context, state) => const SignupView(),
+      ),
+      GoRoute(
+        path: login,
+        builder: (context, state) => const SignupView(),
+      ),
+      GoRoute(
+        path: home,
         builder: (context, state) => const SignupView(),
       ),
      

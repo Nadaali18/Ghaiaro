@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:ghaiaro/presentation/auth/widgets/bottom_row.dart';
+import 'package:ghaiaro/presentation/auth/widgets/custom_elevated_button.dart';
+import 'package:ghaiaro/presentation/auth/widgets/divider_row.dart';
 import 'package:ghaiaro/presentation/auth/widgets/header.dart';
 import 'package:ghaiaro/presentation/auth/widgets/pass_text_field.dart';
+import 'package:ghaiaro/presentation/auth/widgets/social_icons.dart';
 import 'package:ghaiaro/presentation/auth/widgets/text_field.dart';
 
 class SignupBody extends StatelessWidget {
@@ -23,11 +27,14 @@ class SignupBody extends StatelessWidget {
                 child: Column(
                   children: [
                     SizedBox(height:30),
-                    CustomTextField(label: 'اسم المستخدم',icon: Icons.person,),
-                    CustomTextField(label: 'البريد الالكتروني', icon: Icons.email),
+                    CustomTextField(label: 'اسم المستخدم',icon: Icons.person_outline,),
+                    CustomTextField(label: 'البريد الالكتروني', icon: Icons.email_outlined),
                     PassTextField(labelText: 'كلمه السر'),
                     PassTextField(labelText: 'تأكيد كلمه السر'),
-                    
+                    CustomElevatedButton(text: 'إنشاء حساب'),
+                    DividerRow(),
+                    SocialIcons(),
+                    BottomAppBar(child: BottomRow(questionT: 'لديك حساب بالفعل؟ ', responsT: 'تسجيل الدخول'),)
                   ],
                 ),
               ),

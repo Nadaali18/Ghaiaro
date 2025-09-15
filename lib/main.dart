@@ -6,14 +6,13 @@ import 'package:ghaiaro/Core/Routes/routes.dart';
 void main() {
  runApp(DevicePreview(
     enabled: !kReleaseMode,
-    builder: (context) => const Ghaiaro(), // Wrap your app
+    builder: (context) => const Ghaiaro(), 
   ));
 }
 
 class Ghaiaro extends StatelessWidget {
   const Ghaiaro({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
