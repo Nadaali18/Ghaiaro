@@ -7,7 +7,7 @@ final String image;
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 6),
+      padding: const EdgeInsets.symmetric(horizontal: 15),
       child: InkWell(
         focusColor: Colors.white,
         onTap: onTap,

@@ -8,16 +8,19 @@ class DividerRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 15,vertical: 15),
-      child: Row(
-        children: [
-          Divider(color: primaryColor,),
-          SizedBox(width: 8,),
-          CustomText('أو',fontFamily: textFont,fontWeight: FontWeight.w500,fontSize: 14,),
-          SizedBox(width: 8,),
-          Divider(color: primaryColor,),
-        ],
+    return SizedBox(
+      width: double.infinity,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 15,vertical: 20),
+        child: Row(
+          children: [
+            Expanded(child: Divider(color: primaryColor,)),
+            SizedBox(width: 8,),
+            CustomText('أو',fontFamily: textFont,fontWeight: FontWeight.w500,fontSize: 14,),
+            SizedBox(width: 8,),
+            Expanded(child: Divider(color: primaryColor,)),
+          ],
+        ),
       ),
     );
   }

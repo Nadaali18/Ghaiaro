@@ -10,7 +10,6 @@ final String text;
     return Padding(
       padding: const EdgeInsets.only(top: 60,bottom: 50),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           CustomText(
             '!مرحباً',

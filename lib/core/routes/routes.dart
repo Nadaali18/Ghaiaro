@@ -1,4 +1,5 @@
 import 'package:ghaiaro/Presentation/splash/splash_screen_view.dart';
+import 'package:ghaiaro/presentation/auth/login/login_view.dart';
 import 'package:ghaiaro/presentation/auth/signup/signup_view.dart';
 import 'package:ghaiaro/presentation/onboarding/view/onboarding_view.dart';
 import 'package:go_router/go_router.dart';
@@ -26,7 +27,7 @@ class Routes {
       ),
       GoRoute(
         path: login,
-        builder: (context, state) => const SignupView(),
+        builder: (context, state) => const LoginView(),
       ),
       GoRoute(
         path: home,

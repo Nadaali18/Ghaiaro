@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:ghaiaro/Core/helpers/colors.dart';
+import 'package:ghaiaro/Core/widgets/custom_text.dart';
 import 'package:ghaiaro/core/routes/routes.dart';
 import 'package:ghaiaro/presentation/auth/widgets/bottom_row.dart';
 import 'package:ghaiaro/presentation/auth/widgets/custom_elevated_button.dart';
@@ -9,8 +11,8 @@ import 'package:ghaiaro/presentation/auth/widgets/social_icons.dart';
 import 'package:ghaiaro/presentation/auth/widgets/text_field.dart';
 import 'package:go_router/go_router.dart';
 
-class SignupBody extends StatelessWidget {
-  const SignupBody({super.key});
+class LoginBody extends StatelessWidget {
+  const LoginBody({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +20,7 @@ class SignupBody extends StatelessWidget {
       width: double.infinity,
       child: Column(
         children:[
-          Header(text: 'أنشئ حسابك وابدأ التسوق بسهولة'),
+          Header(text: 'سجّل دخولك وابدأ التسوق'),
           Expanded(
             child: Container(
               decoration: BoxDecoration(
@@ -29,14 +31,20 @@ class SignupBody extends StatelessWidget {
                 child: Column(
                   children: [
                     SizedBox(height:30),
-                    CustomTextField(label: 'اسم المستخدم',icon: Icons.person_outline,),
                     CustomTextField(label: 'البريد الالكتروني', icon: Icons.email_outlined),
                     PassTextField(labelText: 'كلمه السر'),
-                    PassTextField(labelText: 'تأكيد كلمه السر'),
-                    CustomElevatedButton(text: 'إنشاء حساب'),
+                    CustomElevatedButton(text: 'تسجيل الدخول'),
+                     Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                      child: InkWell(
+                        onTap: () {
+                        },
+                        child: CustomText(
+                          'نسيت كلمه السر؟',fontSize: 14,fontWeight: FontWeight.w500,color: primaryColor,)),
+                    ),
                     DividerRow(),
                     SocialIcons(),
-                    BottomRow(questionT: 'لديك حساب بالفعل؟ ', responsT: 'تسجيل الدخول',onTap:()=>context.go(Routes.login) ,),
+                    BottomRow(questionT: 'ليس لديك حساب؟ ', responsT: 'أنشئ حساب جديد',onTap: () => context.go(Routes.signUp),),
                   ],
                 ),
               ),
