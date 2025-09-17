@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ghaiaro/core/helpers/colors.dart';
-import 'package:ghaiaro/presentation/auth/signup/signup_body.dart';
+import 'package:ghaiaro/Presentation/auth/signup/signup_body.dart';
 
 class SignupView extends StatelessWidget {
   const SignupView({super.key});

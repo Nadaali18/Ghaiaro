@@ -1,6 +1,6 @@
-# ghaiaro
+# Ghaiaro
 
-A new Flutter project.
+Ghiaro is a bilingual e-commerce mobile application (Arabic & English) specialized in selling car spare parts and accessories. It also provides technical support and an integrated chatbot to assist customers in finding the right products and services.
 
 ## Getting Started
 

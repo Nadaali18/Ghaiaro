@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ghaiaro/Core/helpers/colors.dart';
+import 'package:ghaiaro/core/helpers/colors.dart';
+import 'package:ghaiaro/core/widgets/custom_container_shadow.dart';
 
 class CustomTextField extends StatelessWidget {
   const CustomTextField({
@@ -15,20 +16,8 @@ class CustomTextField extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal:20, vertical:10),
       child: Directionality(
         textDirection: TextDirection.rtl, 
-        child: Container(
+        child: CustomContainerShadow(
           height: 55,
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(30),
-            boxShadow: [
-              BoxShadow(
-                color: Colors.grey,
-                spreadRadius: 1,
-                blurRadius: 6,
-                offset: Offset(0, 3),
-              ),
-            ],
-          ),
           child: TextFormField(
             cursorColor: primaryColor,
             style: TextStyle(
