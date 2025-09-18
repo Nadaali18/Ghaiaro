@@ -41,7 +41,7 @@ final List products=[
               crossAxisCount: 2,
               mainAxisSpacing: 10,
               crossAxisSpacing: 10,
-              childAspectRatio: 0.7,
+              childAspectRatio: 0.65,
               ), 
             itemCount: products.length,
             itemBuilder: (context,index)=>ProductContainer

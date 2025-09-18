@@ -101,9 +101,7 @@ final String price;
                 style: ElevatedButton.styleFrom(
                   backgroundColor: primaryColor,
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.vertical(
-                      bottom: Radius.circular(25),
-                    ),
+                    borderRadius: BorderRadius.circular(25),
                   ),
                   padding: const EdgeInsets.symmetric(vertical: 8),
                 ),
