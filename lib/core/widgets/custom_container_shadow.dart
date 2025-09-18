@@ -2,12 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:ghaiaro/core/helpers/colors.dart';
 
 class CustomContainerShadow extends StatelessWidget {
-  const CustomContainerShadow({super.key,this.width,this.height,required this.child,this.padd,this.marg});
+  const CustomContainerShadow({super.key,this.radius,this.width,this.color,this.height,required this.child,this.padd,this.marg});
 final Widget child;
 final double? padd;
 final double? marg;
 final double? height;
 final double? width;
+final Color? color ;
+final double? radius;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -17,7 +19,8 @@ final double? width;
        margin: EdgeInsets.all(marg??0),
               decoration: BoxDecoration(
               color: textFieldColor,
-              borderRadius: BorderRadius.circular(30),
+              borderRadius: BorderRadius.circular(radius??30),
+              border: Border.all(color: color ?? Colors.transparent),
               boxShadow: [
                 BoxShadow(
                     color: Colors.grey,
